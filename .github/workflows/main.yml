@@ -37,7 +37,7 @@ jobs:
         run: . env/bin/activate && pytest
 
       - name: Create archive of dependencies
-        run: /
+        run: |
           cd ./env/lib/python3.8/site-packages
           zip -r9 ../../../../api.zip .
 
