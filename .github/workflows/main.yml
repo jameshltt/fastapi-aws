@@ -30,7 +30,7 @@ jobs:
             ${{ runner.os }}-env-
 
       - name: Activate Virtual ENV
-        run: python3 -m env && source env/bin/activate && pip3 install -r requirements.txt 
+        run: Virtualenv env && source env/bin/activate && pip3 install -r requirements.txt 
 
       - name: Run tests
         run: . env/bin/activate && pytest
@@ -45,5 +45,5 @@ jobs:
       - name: Upload zip file to artifact
 
         uses: actions/upload-artifact@v2
-        
+
 
